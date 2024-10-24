@@ -17,9 +17,7 @@ public class ProductApplication {
 
 	@Bean
 	public Hibernate6Module datatypeHibernateModule() {
-		Hibernate6Module module= new Hibernate6Module();
-		module.disable(Hibernate6Module.Feature.USE_TRANSIENT_ANNOTATION);
-        module.enable(Hibernate6Module.Feature.SERIALIZE_IDENTIFIER_FOR_LAZY_NOT_LOADED_OBJECTS);
-		return module;
+		return new Hibernate6Module();
+
 	}
 }
